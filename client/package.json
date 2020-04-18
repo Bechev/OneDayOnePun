@@ -1,0 +1,20 @@
+{
+  "name": "OneDayOnePun",
+  "version": "1.0.0",
+  "description": "Twitter bot tweeting one pun a day",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "twitter",
+    "bot"
+  ],
+  "author": "BCT",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.0",
+    "twit": "^2.2.11",
+    "twitt": "^1.0.0"
+  }
+}

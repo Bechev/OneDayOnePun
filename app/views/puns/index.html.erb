@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Puns list</title>
+    </head>
+    <body>
+        <h1>Upcoming puns</h1>
+        <%= link_to 'Filter Published', root_path(filter: 'published') %><br></br>
+        <%= link_to 'Filter Non Published', root_path(filter: 'not published') %><br></br>
+        <%= link_to 'Show All', root_path(filter: 'all') %><br></br>
+
+        <div>
+            <ol>
+                <% @puns.each do |pun| %>
+                    <li><%= link_to pun.tweet, pun_path(pun) %>
+                        <ul>
+                            <li>has been published: <%= pun.is_published ? "yes" : "no" %></li>
+                            <li>publication date <%=pun.publication_date %></li>
+                        </ul><br></br>
+                    </li>
+                <% end %>
+            </ol>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Pun # <%= @pun.id %></title>
+    </head>
+    <body>
+        <h1>Upcoming puns</h1>
+        <div>
+                
+            <ul>
+                <li>
+                    <%= @pun.tweet %>
+                </li>
+                <li>
+                    <%= @pun.is_published ? "published" :  "not published" %>
+                </li>
+                <li> 
+                    Publication date:  <%= @pun.publication_date %>
+                </li>
+            </ul>
+
+            <h2>Edit Tweet</h2>
+            
+            <div>
+                <%= form_with model: @pun, url: pun_path, method: "patch" do |pun| %>
+                    <%= pun.text_field :tweet %>
+                    <%= pun.submit "Edit" %>
+                <% end %>
+            </div>
+
+            <%= button_to "Delete tweet", pun_path(@pun), :method => :delete %>
+        </div>
+
+        <br></br>
+        <%= link_to "Home", root_path %>
+        <br></br>
+
+    </body>
+</html>
