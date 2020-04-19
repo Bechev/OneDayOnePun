@@ -22,6 +22,9 @@ function update_database(db_data)
     .then((response_data) => {
         console.log("updated the db, the tweet was:")
         console.log(response_data)})
+    .catch((error) => {
+        console.log(error)
+    })
 }
 
 
@@ -42,6 +45,7 @@ function publish_tweet (tweet_data){
 
 list_unpublished_tweets()
   .then(data => publish_tweet(data[0])); 
+  .catch(error=>{console.log(error)})
 
 
 // function runProgram(){

@@ -1,1 +1,1 @@
-web: bundle exec rails server -p 5436
+web: bundle exec rails s
