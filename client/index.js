@@ -39,6 +39,12 @@ function publish_tweet (tweet_data){
         }else{
             console.log("Couldn't tweet'... Maybe a duplicate?")
             console.log(tweet_data)
+            console.log("that's the error////////////////////////////////////////")
+            console.log(err)
+            console.log("that's the response data////////////////////////////////")
+            console.log(response_data)
+            console.log("'That's the response////////////////////////////////////")
+            console.log(response)
         }
     })
 }
