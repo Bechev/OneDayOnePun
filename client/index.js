@@ -38,7 +38,7 @@ function publish_tweet (tweet_data){
             update_database(db_data)
         }else{
             console.log("Couldn't tweet'... Maybe a duplicate?")
-            console.log(db_data)
+            console.log(tweet_data)
         }
     })
 }
