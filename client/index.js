@@ -33,12 +33,12 @@ function publish_tweet (tweet_data){
         if (!err){
             const db_data = Object.assign(tweet_data, {tweet_id: response_data.id})
             console.log('Twitted the following')
-            console.log(db_data)
+            console.log(tweet_data)
             console.log('Updating database')
-            update_database(db_data)
+            update_database(tweet_data)
         }else{
             console.log("Couldn't tweet'... Maybe a duplicate?")
-            console.log(db_data)
+            console.log(tweet_data)
         }
     })
 }
