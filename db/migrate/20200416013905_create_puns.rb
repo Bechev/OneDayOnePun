@@ -6,7 +6,7 @@ class CreatePuns < ActiveRecord::Migration[5.2]
         t.date :publication_date
         t.integer :likes, default: 0
         t.integer :retweets, default: 0
-        t.integer :tweet_id
+        t.long :tweet_id
       t.timestamps
     end
   end
