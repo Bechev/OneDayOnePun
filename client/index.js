@@ -6,14 +6,14 @@ global.fetch = require("node-fetch");
 
 async function list_unpublished_tweets() 
 {
-  let response = await fetch('/puns.json?filter=not+published',{method: 'GET'});
+  let response = await fetch('https://onedayonepun.herokuapp.com/puns.json?filter=not+published',{method: 'GET'});
   let data = await response.json()
   return data;
 }
 
 function update_database(db_data)
 {
-    fetch('/publish/'+ db_data.id + ".json",{
+    fetch('https://onedayonepun.herokuapp.com/publish/'+ db_data.id + ".json",{
         method: 'PATCH',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(db_data)
