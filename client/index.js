@@ -44,7 +44,7 @@ function publish_tweet (tweet_data){
 }
 
 list_unpublished_tweets()
-  .then(data => publish_tweet(data[0])); 
+  .then(data => publish_tweet(data[0]))
   .catch(error=>{console.log(error)})
 
 
