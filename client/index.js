@@ -6,14 +6,14 @@ global.fetch = require("node-fetch");
 
 async function list_unpublished_tweets() 
 {
-  let response = await fetch('http://localhost:3000/puns.json?filter=not+published',{method: 'GET'});
+  let response = await fetch('/puns.json?filter=not+published',{method: 'GET'});
   let data = await response.json()
   return data;
 }
 
 function update_database(db_data)
 {
-    fetch('http://localhost:3000/publish/'+ db_data.id + ".json",{
+    fetch('/publish/'+ db_data.id + ".json",{
         method: 'PATCH',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(db_data)
